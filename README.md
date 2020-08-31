@@ -1,11 +1,10 @@
 # The Buildpack Standard Library
 
-[![GitHub tag](https://img.shields.io/github/tag/heroku/buildpack-stdlib.svg)]()
-[![Build Status](https://img.shields.io/travis/heroku/buildpack-stdlib/master.svg)](https://travis-ci.org/heroku/buildpack-stdlib)
-[![Available](https://img.shields.io/website-up-down-green-red/http/lang-common.s3.amazonaws.com.svg?label=Deployment%20Available)]()
+[![GitHub tag](https://img.shields.io/github/tag/drycc/buildpack-stdlib.svg)]()
+[![Build Status](https://img.shields.io/travis/drycc/buildpack-stdlib/master.svg)](https://travis-ci.org/drycc/buildpack-stdlib)
 
 
-This repo contains a standard library for use within Heroku Buildpacks.
+This repo contains a standard library for use within Buildpacks.
 
 It allows for unified output methods, some common buildpack utilities, and facilitates metrics logging.
 
@@ -54,7 +53,7 @@ We recommend pinning to a specific release, for stability reasons.
 - `sub_env`, which launches a subshell with user-provided config.
 - `export_env`, which exports user-provided config into the current shell.
 
-**Metrics (only available to Official Heroku Buildpacks)**:
+**Metrics (only available to Official Buildpacks)**:
 
 - `nowms`, which returns the current time in millesconds.
 - `mtime`, which measures time elapsed for a specific build step.
@@ -63,25 +62,4 @@ We recommend pinning to a specific release, for stability reasons.
 - `munique`, which logs a unique measurement build step.
 - `mcount_exit`, which logs an exit event and exits 1.
 
-*Please see the contents of [stdlib.sh](https://github.com/heroku/buildpack-stdlib/blob/master/stdlib.sh) for more usage details (including required environment variables).*
-
---------------------------
-
-## Deploying to Amazon S3
-
-Fetch the repo from GitHub:
-
-- `$ git clone git@github.com:heroku/buildpack-stdlib.git`
-- `$ cd buildpack-stdlib`
-
-Upload the stdlib to Amazon S3:
-
-- `$ git remote add heroku https://git.heroku.com/buildpack-stdlib.git`
-- `$ git push heroku master`
-- `$ heroku run python upload.py`
-
-Notice the version number outputted, then tag it in Git and push that to GitHub:
-- `$ git tag v42`
-- `$ git push --tags`
-
-Don't forget to update `HISTORY.txt`!
+*Please see the contents of [stdlib.sh](https://github.com/drycc/buildpack-stdlib/blob/master/stdlib.sh) for more usage details (including required environment variables).*
